@@ -1,2 +1,13 @@
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<% provide(:title, "お問い合わせ") %>
+<div class = "main">
+  <h2>お問い合わせ</h2>
+  <p>お名前（必須）</p>
+  <input>
+  <p>メールアドレス（必須）</p>
+  <input>
+  <p>お問い合わせ内容（必須）</p>
+  <textarea></textarea>
+  <p>※必須項目は必ずご入力ください</p>
+  <!-- もう一度確認↓ --> 
+  <input class="contact-submit" type="submit" value="送信"> 
+</div>

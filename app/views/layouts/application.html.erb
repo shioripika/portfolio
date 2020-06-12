@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PortfolioApp</title>
+    <title><%= yield(:title) %> | 石原農園</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
   </head>
-
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "TOP",   '#' %></li>
+          <li><%= link_to "農園紹介",   '#' %></li>
+          <li><%= link_to "作っとるもん", '#' %></li>
+          <li><%= link_to "野菜の日常と交流", '#' %></li>
+          <li><%= link_to "お問い合わせ", '#' %></li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
