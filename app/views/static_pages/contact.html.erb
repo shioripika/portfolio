@@ -1,13 +1,22 @@
 <% provide(:title, "お問い合わせ") %>
-<div class = "main">
-  <h2>お問い合わせ</h2>
-  <p>お名前（必須）</p>
-  <input>
-  <p>メールアドレス（必須）</p>
-  <input>
-  <p>お問い合わせ内容（必須）</p>
-  <textarea></textarea>
+<div class = "contact-main">
+ <h2>お問い合わせ</h2>
+ <form>
+  <div class="item">
+    <label class="label">お名前（必須）</label>
+    <input class="inputs" type="text" name="name">
+  </div>
+  <div class="item">
+    <label class="label">メールアドレス（必須）</label>
+    <input class="inputs" type="email" name="email">
+  </div>
+  <div class="item">
+    <label class="label">お問い合わせ内容（必須）</label>
+    <textarea class="inputs" cols="50" rows="10" placeholder="ご入力ください"></textarea>
+  </div>
   <p>※必須項目は必ずご入力ください</p>
-  <!-- もう一度確認↓ --> 
-  <input class="contact-submit" type="submit" value="送信"> 
+  <div class="btn-area">
+    <input type="submit" value="送信">
+  </div>
+ </form>   
 </div>

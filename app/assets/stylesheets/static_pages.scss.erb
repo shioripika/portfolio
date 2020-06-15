@@ -1,0 +1,149 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.image{
+  border-radius:10px;
+}
+
+/* home */
+.main-top{
+  background-image: url(<%= asset_path('home.jpg') %>);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  height: 800px;
+  width: 1200px;
+  position: relative;
+  left: -30px;
+  h1{
+    font-family: serif;
+    position: absolute;
+    font-size: 5em;
+    font-weight: bold;
+    top: 60%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+  }
+}
+
+/* introduce */
+.left-image{
+  float: left;
+  width: 40%;
+  padding-left: 100px;
+}
+
+.right-image{
+  float: right;
+  width: 40%;
+  padding-right: 100px;
+}
+
+.clear{
+  clear:both;
+}
+
+.content{
+  padding-bottom: 20px;
+}
+
+.txt-content{
+  vertical-align: middle;
+  padding-top: 70px;
+  font-size: 1.2em;
+}
+
+/* grow */
+.summer{
+  margin-top: 50px;
+}
+
+.summer-title{
+  border-bottom:2px solid #dee7ec;
+  font-size: 2em;
+}
+
+.s-vegitable{
+  float:left;
+  width: 33.33%;
+  .explanation{
+    width: 80%;
+    padding-left: 85px;
+  }
+}
+
+.winter{
+  clear: left;
+  padding-top: 50px;
+}
+
+.winter-title{
+  border-bottom:2px solid #dee7ec;
+  font-size: 2em;
+}
+
+.w-vegitable{
+  float:left;
+  width: 33.33%;
+  .explanation{
+    width: 80%;
+    padding-left: 85px;
+  }
+}
+
+/* contact */
+.contact-main{
+  text-align: center;
+  font-size:15px;
+}
+form{
+  width:460px;
+  margin:0 auto;
+  padding-left: 90px;
+}
+.item{
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.label{
+  float: left;
+  margin-right: 20px;
+  width:135px;
+  border-left: solid 3px #e0505d;
+  padding-left: 10px;
+  color: black;
+  font-size: 1em;
+}
+.inputs{
+  float: left;
+  width:300px;
+}
+input[type="text"],input[type="email"]{
+  border: solid 1px #aaa;
+  border-radius:5px;
+  padding:10px;
+  font-size: 15px;
+}
+textarea{
+  border: solid 1px #aaa;
+  border-radius:5px;
+  padding: 10px;
+  height: 160px;
+  font-size: 15px;
+}
+.btn-area{
+  text-align: center;
+}
+input[type="submit"]{
+  background: #e0505c;
+  border: none;
+  color: white;
+  font-size:17px;
+  font-weight:bold;
+  padding: 10px 20px;
+  margin: 0 5px;
+}

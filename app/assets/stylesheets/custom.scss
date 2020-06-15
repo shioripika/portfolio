@@ -1,0 +1,56 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+$gray-medium-light: #eaeaea; 
+/* universal */
+body {
+  padding-top: 30px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.main {
+  text-align: center;
+}
+
+
+/* typography */
+h1, h2, h3{
+    line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1em;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight:bold;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* footer */
+footer {
+  
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: #777;
+  
+}
