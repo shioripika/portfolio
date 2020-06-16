@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get "/introduce", to: "static_pages#introduce"
   get "/grow", to: "static_pages#grow"
   get "/contact", to: "static_pages#contact"
+  get "/signup", to: "users#new"
 end
