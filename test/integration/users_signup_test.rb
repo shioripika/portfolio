@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UsersSignupTest < ActionDispatch::IntegrationTest
-  #ユーザー登録に失敗する内容のテスト
+  #ユーザー登録に失敗するテスト
   test "invalid signup imformation" do
     get signup_path
     assert_no_difference "User.count" do
@@ -22,5 +22,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_template "users/show"
     assert_not flash.empty?
+    assert is_logged_in?
   end
 end
