@@ -8,3 +8,9 @@ ja:
         email: メールアドレス
         password: パスワード
         password_confirmation: パスワード再入力
+ja:
+  #gem名を指定
+  will_paginate:
+    #ラベル名で指定
+    previous_label: ←前
+    next_label: 次→        
