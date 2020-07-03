@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get "/introduce", to: "static_pages#introduce"
   get "/grow", to: "static_pages#grow"
+  #get "/community", to: "microposts#index"
   get "/contact", to: "static_pages#contact"
   get "/signup", to: "users#new"
   post '/signup',  to: 'users#create'
@@ -9,4 +10,5 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
   resources :users
+  resources :microposts
 end
