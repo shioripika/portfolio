@@ -14,4 +14,7 @@ class Micropost < ApplicationRecord
         errors.add(:picture, "5MB以下でお願いします。")
       end
     end
+    
 end
+
+
