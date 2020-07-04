@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/grow", to: "static_pages#grow"
   #get "/community", to: "microposts#index"
   get "/contact", to: "contacts#new"
+  post "/contact", to: "contacts#create"
   get "/signup", to: "users#new"
   post '/signup',  to: 'users#create'
   get "/login", to: "sessions#new"
