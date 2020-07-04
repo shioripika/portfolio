@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'contacts/new'
-
-  get 'contacts/create'
+  
 
   root 'static_pages#home'
   get "/introduce", to: "static_pages#introduce"
