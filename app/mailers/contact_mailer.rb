@@ -7,6 +7,5 @@ class ContactMailer < ApplicationMailer
   
   
 
-    mail to: "to@example.org"
-  
+   
 end
