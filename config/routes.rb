@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  get 'contacts/new'
+
+  get 'contacts/create'
+
   root 'static_pages#home'
   get "/introduce", to: "static_pages#introduce"
   get "/grow", to: "static_pages#grow"
   #get "/community", to: "microposts#index"
-  get "/contact", to: "static_pages#contact"
+  get "/contact", to: "contacts#new"
   get "/signup", to: "users#new"
   post '/signup',  to: 'users#create'
   get "/login", to: "sessions#new"
@@ -11,4 +15,5 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   resources :users
   resources :microposts
+  resources :contacts
 end
