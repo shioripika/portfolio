@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   
 
+  get 'likes/create'
+
+  get 'likes/destroy'
+
   root 'static_pages#home'
   get "/introduce", to: "static_pages#introduce"
   get "/grow", to: "static_pages#grow"
-  #get "/community", to: "microposts#index"
   get "/contact", to: "contacts#new"
   post "/contact", to: "contacts#create"
   get "/signup", to: "users#new"
@@ -15,4 +18,5 @@ Rails.application.routes.draw do
   resources :users
   resources :microposts
   resources :contacts
+  resources :likes, only: [:create, :destroy]
 end

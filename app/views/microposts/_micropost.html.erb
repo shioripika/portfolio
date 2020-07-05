@@ -1,4 +1,5 @@
 <li id="micropost-<%= micropost.id %>">
+ <div class="micro_form"> 
   <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
   <span class="content">
@@ -12,4 +13,7 @@
                                        data: { confirm: "本当に削除しますか?" } %>
     <% end %>
    </span>
+   <%= render "likes/like", micropost: micropost %>
+  
+ </div>  
 </li>
