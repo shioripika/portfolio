@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  
-
-  get 'likes/create'
-
-  get 'likes/destroy'
 
   root 'static_pages#home'
   get "/introduce", to: "static_pages#introduce"

@@ -297,3 +297,64 @@ span.picture {
   position: relative;
  
 }
+
+/* ボタン全体 */
+.flowbtn5{
+border-radius:13px;		
+position:relative;
+display:inline-block;
+width:50px;
+height:50px;
+font-size:33px;
+color:#fff!important;
+transition:.5s;
+text-decoration:none;
+}
+/* アイコンをど真ん中に*/
+.flowbtn5 i{
+position:absolute;
+top:50%;
+left:50%;
+-ms-transform:translate(-50%,-50%);
+-webkit-transform:translate(-50%,-50%);
+transform:translate(-50%,-50%);
+}
+/* Twitter */
+.fl_tw1{
+background:#55acee;
+}
+
+/* Instagram紫グラデ背景色 */
+.insta_btn5 {
+background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;		
+}
+/* Instagramオレンジグラデ背景色 */
+.insta_btn5:before{
+content: '';
+position:absolute;
+top:17px;
+left:-1px;
+width:45px;
+height:34px;
+background:-webkit-radial-gradient(#ffdb2c 10%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+background:radial-gradient(#ffdb2c 5%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 70%);
+}
+/* Instagramアイコン調整 */
+.insta_btn5 .fa-instagram{
+font-size:40px;	
+}
+/* アイコンボタンにマウスホバーした時の指定*/
+.flowbtn5:hover{
+-webkit-transform:translateY(-5px);
+-ms-transform:translateY(-5px);
+transform:translateY(-5px);
+text-decoration:none;
+}
+
+/* アイコンボタン全体の位置 */
+.snsbtniti{
+display:flex;
+flex-flow:row wrap;
+justify-content:space-around;
+}

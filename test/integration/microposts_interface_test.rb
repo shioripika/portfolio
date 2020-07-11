@@ -25,6 +25,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     assert assigns(:micropost).picture?
     assert_redirected_to root_url
     follow_redirect!
+    assert_not flash.empty?
     assert_match content, response.body
     # 投稿を削除する
     assert_select 'a', text: '削除'
