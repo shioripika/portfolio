@@ -10,13 +10,112 @@
       </section>
     </aside>
     <div class="col-md-8">
-      <h3>Micropost Feed</h3>
+      <h3>投稿一覧</h3>
       <%= render 'shared/feed' %>
     </div>
   </div>
 <% else %>
-
- <div class = "main-top">
-    <h1>おいしいもん、<br> お客様の食卓に<br>届けます。</h1>
+ <div class = "top">
+    <div class = "main-top">
+      <h1>おいしいもん、<br> お客様の食卓に<br>届けます。<br>
+      <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-warning" %>
+      <%= link_to "ログイン",   login_path, class: "btn btn-lg btn-warning" %></h1>
+    </div>
  </div>
+ 
+ <div class = "main">
+  <h2>農園紹介</h2>
+  <div class = "people">
+    <h3>◆育てとる人◆</h3>
+    <div class = "intro-content">
+      <%= image_tag"huuhu.jpg", :size => "255x255", class: "left-image image"  %>
+      <div class = "txt-content">
+        <p>石原　欽吾・真理<br>夫婦で力合わせてやらせてもろてます。</p>
+      </div>
+      <p class = "clear"></p>
+    </div>
+    <%= image_tag"sikiri.jpg", :size => "200x70" %><%= image_tag"sikiri.jpg", :size => "200x70" %><%= image_tag"sikiri.jpg", :size => "200x70" %><%= image_tag"sikiri.jpg", :size => "200x70" %><%= image_tag"sikiri.jpg", :size => "200x70" %>
+  </div>
+  
+  <div class = "place">
+    <h3>◆育てとる場所◆</h3>
+    <div class = "intro-content">
+      <%= image_tag"ie.jpg", :size => "255x255", class: "right-image image" %>
+      <div class = "txt-content" >
+        <p>大阪府東大阪市<br>都会を感じさせない、自然豊かな場所。</p>
+      </div> 
+      <ul class="snsbtniti">
+　　　　<ul><a href="https://twitter.com/Sharebatake_" class="flowbtn5 fl_tw1"><i class="fab fa-twitter"></i></a></ul>
+　　　　<ul><a href="https://www.instagram.com/share_batake/" class="flowbtn5 insta_btn5"><i class="fab fa-instagram"></i></a></ul>
+　　　</ul>　
+      
+      <p class = "clear"></p>
+    </div>
+    <%= image_tag"sikiri.jpg", :size => "200x70" %><%= image_tag"sikiri.jpg", :size => "200x70" %><%= image_tag"sikiri.jpg", :size => "200x70" %><%= image_tag"sikiri.jpg", :size => "200x70" %><%= image_tag"sikiri.jpg", :size => "200x70" %>
+  </div>
+  
+  <div class = "comment">
+    <h3>◆こだわり◆</h3>
+    <div class = "contents">
+      <div class = "intro-content">
+        <%= image_tag"yasai.jpg", :size => "255x255", class: "left-image image" %>
+        <div class = "txt-content">
+          <p>小さなお子様にも安心・安全の無農薬栽培。<br>やっぱり口に入るもんやから、<br>変なものは絶対作らへん。<br>プライドもって作ってます。</p>
+        </div>
+        <p class = "clear"></p>
+      </div>
+      <div class = "intro-content">
+        <%= image_tag"tuchi.jpg", :size => "255x255", class: "right-image image" %>
+        <div class = "txt-content">
+          <p>収穫したものを美味しい状態で、<br>お客様に食べていただきたい。<br>鮮度にこだわるから、<br>その日収穫したもんを<br>直売所に並べてます。</p>
+        </div> 
+        <p class = "clear"></p>
+      </div>
+    </div>  
+  </div>
+</div>  
+
+<div class = "main">
+  <h2>作っとるもん</h2>
+  <div class = "sessons">
+    <div class = "summer">
+      <p class = "summer-title">夏野菜</p>
+      <div class = "s-vegitable">
+        <%= image_tag"aiko.jpg", :size => '255x280', class: "image" %>
+        <p>アイコトマト</p>
+        <p class = "explanation">なんだこの胴長のミニトマトは？！と思ったアナタ。最近人気の品種で、甘くてパクパク食べれます。</p>
+      </div>
+      <div class = "s-vegitable">
+        <%= image_tag"amanaga.jpg", :size => '255x280', class: "image" %>
+        <p>万願寺とうがらし</p>
+        <p class = "explanation">名前にとうがらしとついてますが、実は甘いとうがらし。ししとうは辛いものがありますが、これはどれも辛くありません。</p>
+      </div>
+      <div class = "s-vegitable">
+        <%= image_tag"nasu.jpg", :size => '255x280', class: "image" %>
+        <p>なすび</p>
+        <p class = "explanation">焼いても、煮ても、炒めても美味しい。当園のなすは安全のため、とげは処理して出荷してます。</p>
+      </div>
+    </div>
+    
+    <div class = "winter">
+      <p class = "winter-title">冬野菜</p>
+      <div class = "w-vegitable">
+        <%= image_tag"hakusai.jpg", :size => '255x280', class: "image" %>
+        <p>白菜</p>
+        <p class = "explanation">当園は昼夜の気温差が激しく、厳しい環境で育てているので、甘い白菜に仕上がっております。</p>
+      </div>
+      <div class = "w-vegitable">
+        <%= image_tag"daikon.jpg", :size => '255x280', class: "image" %>
+        <p>大根</p>
+        <p class = "explanation">面白い形をした大根が、毎年収穫されます。足や手が生えているようで、まるで人間みたい。どんな形があるか、直売場に見に来てね。</p>
+      </div>
+      <div class = "w-vegitable">
+        <%= image_tag"rensou.jpg", :size => '255x280', class: "image" %>
+        <p>ほうれんそう</p>
+        <p class = "explanation">寒さや霜のストレスにも負けず、育ったほうれんそう。育ち過ぎずると筋が残るので、ベストな状態で出荷してます。</p>
+      </div>
+      <p class = "clear"></p>
+    </div>
+  </div>
+</div>
 <% end %> 

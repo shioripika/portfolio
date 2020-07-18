@@ -12,4 +12,12 @@ class ApplicationController < ActionController::Base
         redirect_to login_url
       end
     end
+    
+    #ログイン前でログイン後の内容を見られないか確認
+    def authenticate_user
+      if current_user == nil
+        flash[:danger] = "ログインして下さい。"
+        redirect_to login_url
+      end  
+    end
 end

@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       log_in @user
       params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
       redirect_back_or @user
+      flash[:success] = "ログインしました。"
     else
       flash.now[:danger] = "ログインできませんでした。"
       render "new"
@@ -17,5 +18,6 @@ class SessionsController < ApplicationController
   def destroy
     log_out if logged_in?
     redirect_to root_url
+    flash[:success] = "ログアウトしました。"
   end  
 end

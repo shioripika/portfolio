@@ -241,10 +241,10 @@
     "true-myth" "2.2.3"
     valid-url "^1.0.9"
 
-"@heroku-cli/plugin-certs-v5@^7.39.4":
-  version "7.39.4"
-  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-certs-v5/-/plugin-certs-v5-7.39.4.tgz#3f664bce5cacc92207eee4176496872dc312dc5d"
-  integrity sha512-rNejNajY7E4I8A8TIfpDe07JjevNkdEz32PxBPWdDPOsyMdC3hg/kJth8LJk2lzEbVHaYHu8QkRMu/jyQXWKZQ==
+"@heroku-cli/plugin-certs-v5@^7.42.4":
+  version "7.42.4"
+  resolved "https://registry.yarnpkg.com/@heroku-cli/plugin-certs-v5/-/plugin-certs-v5-7.42.4.tgz#23675a0a0b567c87fdae0c44272b756de961a3a6"
+  integrity sha512-l+nojipMT/k+XxJ62z6phfQRqQcQvK6ZU+ou6PGNNQfmfoS/KS8doaQ99NhUWmkx6sPfcTgXwcgTnnQTI0v3NA==
   dependencies:
     co "4.6.0"
     co-wait "0.0.0"
