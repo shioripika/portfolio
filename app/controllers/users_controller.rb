@@ -19,6 +19,7 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(user_params)
+
     if @user.save
       log_in @user
       flash[:success] = "ログインしました。"
@@ -34,6 +35,7 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
+    
     if @user.update_attributes(user_params)
       flash[:success] = "プロフィールを更新しました。"
       redirect_to @user
@@ -50,7 +52,7 @@ class UsersController < ApplicationController
   
   private
     def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :image_name)
     end  
     
     # beforeアクション

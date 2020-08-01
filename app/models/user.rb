@@ -9,7 +9,8 @@ class User < ApplicationRecord
             format: {with: VALID_EMAIL_REGEX}, 
             uniqueness: {case_sensitive: false}#大文字小文字を識別する→false
   has_secure_password           
-  validates :password, presence: true, length: {minimum: 6}, allow_nil: true      
+  validates :password, presence: true, length: {minimum: 6}, allow_nil: true 
+  mount_uploader :image_name, ImageNameUploader
   
  class << self
   # 渡された文字列のハッシュ値を返す
@@ -49,5 +50,9 @@ class User < ApplicationRecord
   # 完全な実装は次章の「ユーザーをフォローする」を参照
   def feed
     Micropost.where("user_id = ?", id)
+  end
+  
+  def posts
+    return Micropost.where(user_id: self.id)
   end
 end

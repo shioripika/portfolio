@@ -14,5 +14,8 @@
   <%= f.password_field :password_confirmation, class: 'form-control' %>
   <p>※必須項目は必ずご入力ください</p>
 
+  <%= f.label :image_name, "アイコン" %>
+  <%= f.file_field :image_name, class: 'form-control' %>
+
   <%= f.submit yield(:button_text), class: "btn-area" %>
 <% end %>

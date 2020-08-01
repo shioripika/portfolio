@@ -13,4 +13,5 @@ ja:
   will_paginate:
     #ラベル名で指定
     previous_label: ←前
-    next_label: 次→        
+    next_label: 次→
+    

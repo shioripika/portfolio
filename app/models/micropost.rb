@@ -8,6 +8,10 @@ class Micropost < ApplicationRecord
   validates :content, presence: true, length: { maximum: 140 }
   validate  :picture_size
   
+  def user
+    return User.find_by(id: self.user_id)
+  end
+  
   # マイクロポストをいいねする
   def iine(user)
     likes.create(user_id: user.id)
