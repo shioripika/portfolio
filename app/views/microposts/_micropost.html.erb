@@ -1,7 +1,7 @@
 <li id="micropost-<%= micropost.id %>">
  <div class="micro_form">
   <% if micropost.user.image_name? %>
-    <%= image_tag micropost.user.image_name, size: "50x50" %>
+    <%= image_tag micropost.user.image_name, class: "avater_image" %>
   <% else %>
     <img src="/user_images/avater.jpg", class="avater_image" >
   <% end %>
